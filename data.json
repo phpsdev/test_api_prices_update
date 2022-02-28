@@ -1,0 +1,212 @@
+[
+  {
+    "product_id": 1001001,
+    "prices": {
+      "1": {
+        "price_purchase": 10001,
+        "price_selling": 12001,
+        "price_discount": 11001
+      },
+      "2": {
+        "price_purchase": 10002,
+        "price_selling": 12002,
+        "price_discount": 11002
+      },
+      "3": {
+        "price_purchase": 10003,
+        "price_selling": 12003,
+        "price_discount": 11003
+      },
+      "4": {
+        "price_purchase": 10004,
+        "price_selling": 12004,
+        "price_discount": 11004
+      },
+      "5": {
+        "price_purchase": 10005,
+        "price_selling": 12005,
+        "price_discount": 11005
+      },
+      "6": {
+        "price_purchase": 10006,
+        "price_selling": 12006,
+        "price_discount": 11006
+      },
+      "7": {
+        "price_purchase": 10007,
+        "price_selling": 12007,
+        "price_discount": 11007
+      },
+      "8": {
+        "price_purchase": 10008,
+        "price_selling": 12008,
+        "price_discount": 11008
+      },
+      "9": {
+        "price_purchase": 10009,
+        "price_selling": 12009,
+        "price_discount": 11009
+      },
+      "10": {
+        "price_purchase": 10010,
+        "price_selling": 12010,
+        "price_discount": 11010
+      },
+      "11": {
+        "price_purchase": 10011,
+        "price_selling": 12011,
+        "price_discount": 11011
+      },
+      "12": {
+        "price_purchase": 10012,
+        "price_selling": 12012,
+        "price_discount": 11012
+      },
+      "13": {
+        "price_purchase": 10013,
+        "price_selling": 12013,
+        "price_discount": 11013
+      },
+      "14": {
+        "price_purchase": 10014,
+        "price_selling": 12014,
+        "price_discount": 11014
+      },
+      "15": {
+        "price_purchase": 10015,
+        "price_selling": 12015,
+        "price_discount": 11015
+      },
+      "16": {
+        "price_purchase": 10016,
+        "price_selling": 12016,
+        "price_discount": 11016
+      },
+      "17": {
+        "price_purchase": 10017,
+        "price_selling": 12017,
+        "price_discount": 11017
+      },
+      "18": {
+        "price_purchase": 10018,
+        "price_selling": 12018,
+        "price_discount": 11018
+      },
+      "19": {
+        "price_purchase": 10019,
+        "price_selling": 12019,
+        "price_discount": 11019
+      },
+      "20": {
+        "price_purchase": 10020,
+        "price_selling": 12020,
+        "price_discount": 11020
+      }
+    }
+  },
+  {
+    "product_id": 1001002,
+    "prices": {
+      "1": {
+        "price_purchase": 20001,
+        "price_selling": 22001,
+        "price_discount": 21001
+      },
+      "2": {
+        "price_purchase": 20002,
+        "price_selling": 22002,
+        "price_discount": 21002
+      },
+      "3": {
+        "price_purchase": 20003,
+        "price_selling": 22003,
+        "price_discount": 21003
+      },
+      "4": {
+        "price_purchase": 20004,
+        "price_selling": 22004,
+        "price_discount": 21004
+      },
+      "5": {
+        "price_purchase": 20005,
+        "price_selling": 22005,
+        "price_discount": 21005
+      },
+      "6": {
+        "price_purchase": 20006,
+        "price_selling": 22006,
+        "price_discount": 21006
+      },
+      "7": {
+        "price_purchase": 20007,
+        "price_selling": 22007,
+        "price_discount": 21007
+      },
+      "8": {
+        "price_purchase": 20008,
+        "price_selling": 22008,
+        "price_discount": 21008
+      },
+      "9": {
+        "price_purchase": 20009,
+        "price_selling": 22009,
+        "price_discount": 21009
+      },
+      "10": {
+        "price_purchase": 20010,
+        "price_selling": 22010,
+        "price_discount": 21010
+      },
+      "11": {
+        "price_purchase": 20011,
+        "price_selling": 22011,
+        "price_discount": 21011
+      },
+      "12": {
+        "price_purchase": 20012,
+        "price_selling": 22012,
+        "price_discount": 21012
+      },
+      "13": {
+        "price_purchase": 20013,
+        "price_selling": 22013,
+        "price_discount": 21013
+      },
+      "14": {
+        "price_purchase": 20014,
+        "price_selling": 22014,
+        "price_discount": 21014
+      },
+      "15": {
+        "price_purchase": 20015,
+        "price_selling": 22015,
+        "price_discount": 21015
+      },
+      "16": {
+        "price_purchase": 20016,
+        "price_selling": 22016,
+        "price_discount": 21016
+      },
+      "17": {
+        "price_purchase": 20017,
+        "price_selling": 22017,
+        "price_discount": 21017
+      },
+      "18": {
+        "price_purchase": 20018,
+        "price_selling": 22018,
+        "price_discount": 21018
+      },
+      "19": {
+        "price_purchase": 20019,
+        "price_selling": 22019,
+        "price_discount": 21019
+      },
+      "20": {
+        "price_purchase": 20020,
+        "price_selling": 22020,
+        "price_discount": 21020
+      }
+    }
+  }
+]
