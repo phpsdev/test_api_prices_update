@@ -1,6 +1,6 @@
 <?php
 
-    // так как метод апи единственный то представим что обратываем запрос вида /api/v1/price_updade.json
+    // так как метод апи единственный то представим что обратываем запрос вида /api/v1/price_update.json
     
     header('Content-Type: application/json; charset=utf-8');
  
@@ -76,20 +76,37 @@
 
 
 
+    $product_region_price_add = 0;
+    $product_region_price_update = 0;
     $product_update = 0;
 
     foreach($data as $product){
-        
-        foreach( $product['prices'] as $k => $price) {
-            $region_id = $k;
-            $sql = "INSERT INTO {$_table} (`product_id`, `region_id`, `price_purchase`, `price_selling`, `price_discount`) VALUES(?,?,?,?,?) ON DUPLICATE KEY UPDATE price_purchase=?, price_selling=?, price_discount=?";
-            $stm = $dbh->prepare($sql);
-            $stm->execute( [$product['product_id'],$region_id, $price['price_purchase'],  $price['price_selling'],  $price['price_discount'],$price['price_purchase'],  $price['price_selling'],  $price['price_discount'] ]);
+        $sql = '';
+        foreach( $product['prices'] as $region_id => $price) {
+            $stmt = $dbh->prepare("SELECT price_purchase, price_selling, price_discount  FROM {$_table} WHERE product_id = ? and region_id = ?");
+            $stmt->execute([$product['product_id'], $region_id]);
+            $old_price = $stmt->fetch(PDO::FETCH_ASSOC); // получаем строку в ассоциативном массиве
+            if($old_price === false)
+            {
+                $sql .= "INSERT INTO {$_table} (`product_id`, `region_id`, `price_purchase`, `price_selling`, `price_discount`) VALUES('{$product['product_id']}','{$region_id}', '{$price['price_purchase']}', '{$price['price_discount']}', '{$price['price_selling']}'); "; 
+                $product_region_price_add++;
+            }
+            else if($old_price != $price) // сраниваем массивы
+            {
+                $sql .= "UPDATE `product_prices` SET `price_purchase` = '{$price['price_purchase']}', `price_selling` = '{$price['price_selling']}', `price_discount` = '{$price['price_discount']}'  WHERE `product_id` = '{$product['product_id']}' AND `region_id` = '{$region_id}' LIMIT 1; ";
+                $product_region_price_update++;
+            }
+
         }
-        $product_update++;
+        if($sql !== '')
+        {
+            $stm = $dbh->prepare($sql);
+            $stm->execute();
+            $product_update++;
+        }
     }
 
-    die(json_encode(array('Result' => 'ok', 'product_update' => $product_update)));
+    die(json_encode(['Result' => 'ok', 'product_update' => $product_update, 'product_region_price_add' => $product_region_price_add, 'product_region_price_update' => $product_region_price_update]));
 
 
 
